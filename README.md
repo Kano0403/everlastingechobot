@@ -1,5 +1,5 @@
 # Everlasting Echo Bot
-This is a bot that sends messages as embeds into a channel specified when the command is executed.
+This is a bot that sends messages as embeds into a specified channel.
 
 ## Setup
 2 files need to be created to use this bot:

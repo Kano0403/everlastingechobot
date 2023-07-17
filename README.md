@@ -11,6 +11,8 @@ This is a bot that sends messages as embeds into a channel specified when the co
   - `author` - The person that the message is from
   - `message` - The message to send
 
+Before using the bot, make sure to run `deploy.js` to initialize the slash command in the target server.
+
 ## Usage
 `/everlastingecho <channel>`
 - `<channel>` is the channel to send the messages to.

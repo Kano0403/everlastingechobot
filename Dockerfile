@@ -1,7 +1,9 @@
-from python:3.9-slim
+from node:14-slim
 
 workdir /app
-copy . /app
-run pip install --no-cache-dir -r requirements.txt
+copy package*.json ./
+run npm install --production
+
+copy . .
 
 cmd ["python", "app.py"]

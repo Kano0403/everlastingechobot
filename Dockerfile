@@ -6,4 +6,4 @@ run npm install --production
 
 copy . .
 
-cmd ["python", "app.py"]
+cmd ["node", "main.js"]

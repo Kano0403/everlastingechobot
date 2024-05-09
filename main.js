@@ -1,8 +1,8 @@
 // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
 const { readdirSync } = require("fs");
 const { join } = require("path");
+const { token } = process.env.BOT_TOKEN
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });

@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "d3": "^7.8.5",
-    "discord.js": "^14.11.0"
+    "discord.js": "^14.15.2"
   }
 }

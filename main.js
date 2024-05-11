@@ -2,7 +2,7 @@
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const { token } = process.env.BOT_TOKEN
+const token = process.env.DISCORD_TOKEN
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -11,6 +11,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
 client.once(Events.ClientReady, c => {
     console.log(`Ready! Logged in as ${c.user.tag}`);
+    client.user.setActivity('this')
 });
 
 client.commands = new Collection();

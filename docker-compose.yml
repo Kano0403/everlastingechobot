@@ -1,6 +1,7 @@
 services:
   bot:
     image: ${DOCKER_REPO}/everlastingechobot
+    container_name: everlastingechobot
     volumes:
       - ./data:${MESSAGES_FOLDER}
     environment:

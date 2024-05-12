@@ -1,7 +1,13 @@
 services:
   bot:
-    image: kano0403/everlastingechobot
+    image: ${DOCKER_REPO}/everlastingechobot
     volumes:
-      - /app/data:${MESSAGES_FOLDER}
+      - ./data:${MESSAGES_FOLDER}
     environment:
       DISCORD_TOKEN: ${DISCORD_TOKEN}
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 everlastingechobot

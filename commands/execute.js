@@ -16,7 +16,7 @@ module.exports = {
         await interaction.deferReply({ ephemeral: true });
         const channel = interaction.options.getChannel('channel');
         console.log('executing')
-        const file = readFileSync('data/messages.tsv', 'utf8');
+        const file = readFileSync('/app/data/messages.tsv', 'utf8');
         console.log('st2')
         const messages = file.split('\n')
             .map(message => {

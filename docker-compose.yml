@@ -2,6 +2,6 @@ services:
   bot:
     image: kano0403/everlastingechobot
     volumes:
-      - ./data:${MESSAGES_FOLDER}
+      - /app/data:${MESSAGES_FOLDER}
     environment:
       DISCORD_TOKEN: ${DISCORD_TOKEN}

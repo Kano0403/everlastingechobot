@@ -9,10 +9,11 @@ This is a bot that sends messages as embeds into a specified channel.
 - `message` - The message to send
 
 #### 2. Local .env File
-The most common way to do this is to make a file called `.env`. This file must have 2 lines, with your discord token and the path to the folder containing your `messages.tsv` file after each `=` respectively:
+The most common way to do this is to make a file called `.env`. This file must have 3 lines, with your discord token and the path to the folder containing your `messages.tsv` file after each `=` respectively. The `docker_repo` needs to be the repository of the image (`library` for local, your docker username for dockerhub, etc)
 ```
 DISCORD_TOKEN=
 MESSAGES_FOLDER=
+DOCKER_USERNAME=
 ```
 Then, run these commands to make the variables available:
 - `set -a` (no output)

@@ -3,7 +3,7 @@ services:
     image: ${DOCKER_REPO}/everlastingechobot
     container_name: everlastingechobot
     volumes:
-      - ./data:${MESSAGES_FOLDER}
+      - ${MESSAGES_FOLDER}:/app/data
     environment:
       DISCORD_TOKEN: ${DISCORD_TOKEN}
   watchtower:
